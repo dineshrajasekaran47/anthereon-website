@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthereon | Rehabilitation &amp; Recovery</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+playfair: ['Playfair Display', 'serif'],
+mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+},
+colors: {
+brand: {
+black: '#050505',
+dark: '#0a0a0a',
+gray: '#171717',
+light: '#f5f5f5',
+accent: '#ffffff'
+}
+},
+animation: {
+'fade-in': 'fadeIn 1.5s ease-out forwards',
+'slide-up': 'slideUp 1s ease-out forwards',
+'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+},
+keyframes: {
+fadeIn: {
+'0%': { opacity: '0' },
+'100%': { opacity: '1' },
+},
+slideUp: {
+'0%': { transform: 'translateY(20px)', opacity: '0' },
+'100%': { transform: 'translateY(0)', opacity: '1' },
+}
+}
+}
+}
+}
+</script>
+<style>
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.glass-panel {
+background: rgba(255, 255, 255, 0.03);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.text-glow {
+text-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
+<body class="text-brand-light antialiased selection:bg-white/20 selection:text-white overflow-x-hidden bg-brand-black">
+
+    <!-- Navigation -->
+    <nav class="fixed glass-panel border-b-0 transition-all duration-300 z-50 top-0 right-0 left-0 bg-brand-black/80 backdrop-blur-md">
+        <div class="flex h-16 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
+            
+            <!-- CTA Button Removed -->
+        <a href="#" class="hover:opacity-80 transition-opacity uppercase text-xs font-semibold text-white tracking-widest">Anthereon Performance Gear</a></div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="min-h-screen flex items-center relative overflow-hidden pt-20">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="bg-gradient-to-b from-brand-black via-brand-black/95 to-brand-black absolute top-0 right-0 bottom-0 left-0"></div>
+            <div class="absolute top-0 right-0 w-[50%] h-[50%] bg-blue-900/10 blur-[120px] rounded-full mix-blend-screen"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Hero Text (Left) -->
+            <div class="space-y-8 animate-slide-up" style="animation-delay: 0.2s">
+                <div class="flex items-center gap-3">
+                    <div class="h-px w-8 bg-neutral-700"></div>
+                    <span class="uppercase text-xl text-cyan-300 tracking-normal font-mono">Rehabilitation &amp; Recovery</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-normal text-white tracking-tight font-playfair leading-[1.1]">
+                    Recovery requires consistency, control, and <span class="text-neutral-500">visibility.</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-neutral-400 font-light leading-relaxed max-w-md">
+                    Between appointments, patients perform most of their rehabilitation alone. Anthereon provides clinicians with objective insight into how movement is executed during that time, enabling better guidance, safer progression, and more informed decisions.
+                </p>
+            </div>
+
+            <!-- Hero Visual (Right) - Constructed UI -->
+            <div class="relative w-full h-full flex items-center justify-center animate-fade-in" style="animation-delay: 0.5s">
+                <!-- Main Card -->
+                <div class="glass-panel rounded-xl p-6 w-full max-w-md relative shadow-2xl border border-white/5">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:activity" data-width="16" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
+                            </div>
+                            <div>
+                                <div class="text-[10px] uppercase tracking-wider text-neutral-500 font-mono">Patient ID: 892-A</div>
+                                <div class="text-sm font-medium text-white">ACL Rehabilitation • Wk 4</div>
+                            </div>
+                        </div>
+                        <div class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded border border-emerald-500/20 font-mono">ACTIVE</div>
+                    </div>
+
+                    <!-- Metric Row 1 -->
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs text-neutral-400 font-mono uppercase">
+                                <span>Knee Flexion (L)</span>
+                                <span>Target: 110°</span>
+                            </div>
+                            <div class="flex items-end gap-2">
+                                <span class="text-3xl font-light text-white font-sans">108°</span>
+                                <span class="text-xs text-emerald-400 mb-1.5 flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:trending-up" data-width="12" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 7h6v6"></path><path d="m22 7l-8.5 8.5l-5-5L2 17"></path></g></svg> +4° vs prev
+                                </span>
+                            </div>
+                            <div class="h-1 w-full bg-neutral-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-white/80 w-[92%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs text-neutral-400 font-mono uppercase">
+                                <span>Extension Deficit</span>
+                                <span>Normal: &lt;2°</span>
+                            </div>
+                            <div class="flex items-end gap-2">
+                                <span class="text-3xl font-light text-white font-sans">1.5°</span>
+                                <span class="text-xs text-emerald-400 mb-1.5">Optimal Range</span>
+                            </div>
+                            <!-- Mini Sparkline visualization -->
+                            <div class="flex gap-0.5 h-6 items-end mt-2 opacity-60">
+                                <div class="w-full bg-neutral-800 h-[80%] rounded-sm"></div>
+                                <div class="w-full bg-neutral-800 h-[70%] rounded-sm"></div>
+                                <div class="w-full bg-neutral-800 h-[60%] rounded-sm"></div>
+                                <div class="w-full bg-neutral-800 h-[50%] rounded-sm"></div>
+                                <div class="w-full bg-emerald-500/50 h-[20%] rounded-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Info -->
+                    <div class="mt-8 pt-4 border-t border-white/5 flex justify-between items-center text-xs text-neutral-500">
+                        <span class="">Last sync: 12 min ago</span>
+                        <span class="font-mono">SENSOR_OK</span>
+                    </div>
+                </div>
+                
+                <!-- Floating Decorative Elements -->
+                <div class="absolute -z-10 -top-10 -right-10 w-64 h-64 bg-neutral-800/20 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:arrow-down" data-width="20" class="iconify text-white iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7l-7 7l-7-7"></path></svg>
+        </div>
+    </header>
+
+    <!-- SECTION 1: CONTINUOUS AT-HOME MOVEMENT TRACKING -->
+    <section class="py-24 border-t border-white/5 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 mb-16">
+                <div class="md:col-span-8">
+                    <h2 class="text-3xl md:text-5xl font-medium text-white font-playfair tracking-tight mb-6">
+                        Track movement where recovery <span class="text-neutral-500">actually happens.</span>
+                    </h2>
+                    <p class="text-lg text-neutral-400 font-light leading-relaxed max-w-2xl">
+                        Anthereon enables patients to wear sensors during prescribed rehabilitation exercises at home. Movement is captured continuously, allowing clinicians to see how exercises are performed outside supervised sessions. This brings structure and accountability to unsupervised recovery.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Visual -->
+                <div class="relative aspect-[4/3] rounded-sm overflow-hidden border border-white/10 group">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/57f5d513-366a-42ba-b966-1310c1c36614_1600w.png" alt="Patient performing controlled rehabilitation" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
+                    
+                    <!-- Overlay UI -->
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div class="inline-flex items-center gap-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/10 mb-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                            <span class="text-[10px] text-white font-mono uppercase tracking-wider">Session Recording</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- "What this enables" List -->
+                <div class="md:pt-10">
+                    <h3 class="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-8">What this enables</h3>
+                    <ul class="space-y-8">
+                        <li class="flex items-start gap-4 group">
+                            <div class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:check" data-width="12" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            </div>
+                            <div class="">
+                                <h4 class="text-white text-base font-medium mb-1">Monitoring of prescribed rehab exercises</h4>
+                                <p class="text-sm text-neutral-500 font-light leading-relaxed">Verify that home exercise programs are being attempted.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 group">
+                            <div class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:check" data-width="12" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            </div>
+                            <div class="">
+                                <h4 class="text-white text-base font-medium mb-1">Visibility into execution quality</h4>
+                                <p class="text-sm text-neutral-500 font-light leading-relaxed">See quality, range, and tempo, not just completion checks.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 group">
+                            <div class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:check" data-width="12" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            </div>
+                            <div class="">
+                                <h4 class="text-white text-base font-medium mb-1">Early identification of patterns</h4>
+                                <p class="text-sm text-neutral-500 font-light leading-relaxed">Catch improper movement patterns before they become habits.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: 3D JOINT & MUSCLE ANALYSIS -->
+    <section class="py-24 border-t border-white/5 bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left Visual (Abstract 3D) -->
+                <div class="order-2 md:order-1 relative aspect-square md:aspect-[4/5] bg-brand-black border border-white/5 rounded-lg overflow-hidden flex items-center justify-center">
+                    <!-- Placeholder for 3D visualization using CSS/SVG -->
+                    <div class="relative w-full h-full opacity-60">
+                        <svg viewBox="0 0 400 600" class="w-full h-full stroke-white/20" fill="none">
+                            <!-- Abstract Body Lines -->
+                            <path d="M200,100 L200,250" stroke-width="1"></path>
+                            <path d="M200,150 L140,180 L120,300" stroke-width="1"></path>
+                            <path d="M200,150 L260,180 L280,300" stroke-width="1"></path>
+                            <path d="M200,250 L160,280 L160,450 L150,550" stroke-width="1"></path>
+                            <path d="M200,250 L240,280 L240,450 L250,550" stroke-width="1"></path>
+                            
+                            <!-- Joints (Circles) -->
+                            <circle cx="200" cy="150" r="4" class="fill-neutral-800 stroke-white"></circle>
+                            <circle cx="140" cy="180" r="3" class="fill-neutral-800 stroke-white"></circle>
+                            <circle cx="260" cy="180" r="3" class="fill-neutral-800 stroke-white"></circle>
+                            <circle cx="200" cy="250" r="4" class="fill-neutral-800 stroke-white"></circle>
+                            <circle cx="160" cy="280" r="4" class="fill-neutral-800 stroke-white"></circle>
+                            <circle cx="240" cy="280" r="4" class="fill-neutral-800 stroke-white"></circle>
+                            <circle cx="160" cy="450" r="5" class="fill-neutral-800 stroke-white"></circle>
+                            <circle cx="240" cy="450" r="5" class="fill-neutral-800 stroke-white"></circle>
+                            
+                            <!-- Muscle Activation Highlights -->
+                            <path d="M160,280 Q140,360 160,450" stroke="rgba(52, 211, 153, 0.6)" stroke-width="3" fill="none"></path>
+                            <path d="M240,280 Q260,360 240,450" stroke="rgba(255, 255, 255, 0.1)" stroke-width="3" fill="none"></path>
+                        </svg>
+                        
+                        <!-- Floating Label -->
+                        <div class="absolute top-[40%] left-[20%] glass-panel px-3 py-1 rounded text-[10px] text-white font-mono border border-emerald-500/30">
+                            Quadriceps: 84% Activation
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Text -->
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-5xl font-medium text-white font-playfair tracking-tight mb-6">
+                        Understand how joints and muscles <span class="text-neutral-500">work together.</span>
+                    </h2>
+                    <p class="text-lg text-neutral-400 font-light leading-relaxed mb-10">
+                        By combining IMU and EMG data, Anthereon generates a three-dimensional representation of movement. This provides insight into joint kinematics alongside muscle activation, timing, and coordination. Clinicians gain a deeper understanding of how movement is produced, not just how it appears.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="pl-4 border-l border-white/10">
+                            <h4 class="text-white text-sm font-medium mb-1">3D Reconstruction</h4>
+                            <p class="text-xs text-neutral-500 font-light">Visualizing joint motion accurately during rehab exercises.</p>
+                        </div>
+                        <div class="pl-4 border-l border-white/10">
+                            <h4 class="text-white text-sm font-medium mb-1">Muscle Activation &amp; Timing</h4>
+                            <p class="text-xs text-neutral-500 font-light">Analysis of firing patterns and coordination.</p>
+                        </div>
+                        <div class="pl-4 border-l border-white/10">
+                            <h4 class="text-white text-sm font-medium mb-1">Compensation Detection</h4>
+                            <p class="text-xs text-neutral-500 font-light">Identifying imbalance or delayed activation early.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: STRESS, LOAD & ACTIVATION INSIGHT -->
+    <section class="py-24 border-t border-white/5 bg-brand-black">
+        <div class="max-w-4xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-medium text-white font-playfair tracking-tight mb-6">
+                Identify stress and compensation <span class="text-neutral-500">before reinjury occurs.</span>
+            </h2>
+            <p class="text-lg text-neutral-400 font-light leading-relaxed">
+                Rehabilitation is not only about restoring range of motion, but also about managing stress and load as movement returns. Anthereon analyzes movement mechanics alongside muscle activation to reveal inefficient or risky patterns early.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden border border-white/10 bg-neutral-900">
+                <img src="https://images.unsplash.com/photo-1522898467493-49726bf28798?w=2560&amp;q=80" alt="Movement analysis visualization" class="w-full h-full object-cover opacity-30 grayscale mix-blend-overlay">
+                
+                <!-- Abstract Gradient Overlay representing Stress/Load -->
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-transparent to-brand-black"></div>
+                
+                <!-- Centered Value Prop Grid -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl w-full px-6">
+                        <div class="text-center group">
+                            <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:activity" data-width="20" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
+                            </div>
+                            <h3 class="text-white text-sm font-medium">Joint Stress Monitoring</h3>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:zap" data-width="20" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+                            </div>
+                            <h3 class="text-white text-sm font-medium">Muscular Effort</h3>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:scale" data-width="20" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 3v18m7-13l3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2a17 17 0 0 0 8 2h1M5 8l3 8a5 5 0 0 1-6 0zV7m2 14h10"></path></g></svg>
+                            </div>
+                            <h3 class="text-white text-sm font-medium">Compensatory Strategy</h3>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:border-white/30 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24" data-icon="lucide:shield-check" data-width="20" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12l2 2l4-4"></path></g></svg>
+                            </div>
+                            <h3 class="text-white text-sm font-medium">Reinjury Risk Reduction</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CLINICIAN-READY REPORTING -->
+    <section class="py-24 border-t border-white/5 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            
+            <!-- Left Text -->
+            <div class="">
+                <h2 class="text-3xl md:text-5xl font-medium text-white font-playfair tracking-tight mb-8">
+                    Clear reports designed for <span class="text-neutral-500">clinical decision-making.</span>
+                </h2>
+                <p class="text-lg text-neutral-400 font-light leading-relaxed mb-10">
+                    Anthereon translates complex movement and muscle data into structured, clinician-ready reports. These reports summarize progress, movement quality, and areas of concern between visits.
+                </p>
+                
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <div class="w-1 h-full bg-white/20"></div>
+                        <div class="">
+                            <h4 class="text-white font-medium text-sm">Progress Summaries</h4>
+                            <p class="text-neutral-500 text-xs mt-1">Objective comparison across sessions and phases.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-1 h-full bg-white/20"></div>
+                        <div>
+                            <h4 class="text-white font-medium text-sm">Remote Review</h4>
+                            <p class="text-neutral-500 text-xs mt-1">Review data efficiently between appointments.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-1 h-full bg-white/20"></div>
+                        <div>
+                            <h4 class="text-white font-medium text-sm">Treatment Planning</h4>
+                            <p class="text-neutral-500 text-xs mt-1">Data-informed adjustments to rehabilitation protocols.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Visual: Report Interface -->
+            <div class="bg-neutral-900 border border-white/10 rounded-lg p-8 shadow-2xl relative overflow-hidden group">
+                 <!-- Background grid lines -->
+                 <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20"></div>
+
+                 <!-- Mock Report Content -->
+                 <div class="relative z-10 space-y-6">
+                    <div class="flex justify-between items-end border-b border-white/10 pb-4">
+                        <div>
+                            <div class="text-xs text-neutral-500 font-mono">REPORT GENERATED</div>
+                            <div class="text-white font-playfair text-xl">Weekly Movement Summary</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-neutral-500">Oct 12 - Oct 19</div>
+                            <div class="text-xs text-emerald-400">94% Adherence</div>
+                        </div>
+                    </div>
+
+                    <!-- Chart 1 -->
+                    <div class="space-y-2">
+                        <div class="text-xs text-neutral-400 font-medium">Load Symmetry (L/R)</div>
+                        <div class="h-2 w-full bg-neutral-800 rounded-full flex overflow-hidden">
+                            <div class="h-full bg-neutral-600 w-[48%]"></div>
+                            <div class="h-full bg-transparent w-[4%] border-l border-r border-black/50 bg-black"></div>
+                            <div class="h-full bg-neutral-400 w-[48%]"></div>
+                        </div>
+                        <div class="flex justify-between text-[10px] text-neutral-600 font-mono">
+                            <span>L: 48%</span>
+                            <span>R: 52%</span>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2 -->
+                    <div class="space-y-2">
+                        <div class="text-xs text-neutral-400 font-medium">ROM Consistency</div>
+                        <div class="flex items-end gap-1 h-12">
+                            <div class="w-1/6 bg-white/10 h-[40%] rounded-t-sm"></div>
+                            <div class="w-1/6 bg-white/20 h-[50%] rounded-t-sm"></div>
+                            <div class="w-1/6 bg-white/30 h-[65%] rounded-t-sm"></div>
+                            <div class="w-1/6 bg-white/40 h-[70%] rounded-t-sm"></div>
+                            <div class="w-1/6 bg-white/50 h-[80%] rounded-t-sm"></div>
+                            <div class="w-1/6 bg-white/80 h-[85%] rounded-t-sm"></div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: SUPPORTING CLINICAL CARE -->
+    <section class="py-24 border-t border-white/5 bg-brand-black">
+        <div class="max-w-4xl mx-auto px-6 text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-medium text-white font-playfair tracking-tight mb-6">
+                Built to support <span class="text-neutral-500">clinical expertise.</span>
+            </h2>
+            <p class="text-lg text-neutral-400 font-light leading-relaxed">
+                Anthereon is designed to extend the clinician’s ability to observe, assess, and guide recovery. It provides objective movement insight while preserving professional judgment and individualized care. Used in orthopedic rehabilitation, sports recovery, and return-to-function programs, the system strengthens continuity of care beyond the clinic.
+            </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="aspect-[21/9] rounded-lg overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1706777193603-76c3e9613553?w=2560&amp;q=80" alt="Clinician reviewing report" class="w-full h-full object-cover grayscale opacity-50" style="">
+                <div class="absolute inset-0 bg-brand-black/20"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING SECTION -->
+    <section class="py-32 border-t border-white/5 bg-brand-black">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-6xl font-medium text-white font-playfair tracking-tight leading-tight">
+                Turn unsupervised recovery into <span class="text-neutral-500 italic">informed</span> recovery, anywhere.
+            </h2>
+            <!-- CTA Button Removed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="text-xs text-neutral-600 font-sans">© 2024 ANTHEREON MEDICAL</span>
+            <div class="flex gap-6">
+                <a href="#" class="text-neutral-600 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:twitter" data-width="16" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"></path></svg></a>
+                <a href="#" class="text-neutral-600 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:linkedin" data-width="16" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></g></svg></a>
+            </div>
+        </div>
+    </footer>
+
+</body></html>

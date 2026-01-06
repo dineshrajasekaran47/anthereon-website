@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthereon | The System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+playfair: ['Playfair Display', 'serif'],
+mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+},
+colors: {
+brand: {
+black: '#050505',
+dark: '#0a0a0a',
+gray: '#171717',
+light: '#f5f5f5',
+accent: '#ffffff'
+}
+},
+animation: {
+'fade-in': 'fadeIn 1.5s ease-out forwards',
+'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+},
+keyframes: {
+fadeIn: {
+'0%': { opacity: '0' },
+'100%': { opacity: '1' },
+}
+}
+}
+}
+}
+</script>
+<style>
+/* Utility to hide scrollbars */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+/* Subtle text glow */
+.text-glow { text-shadow: 0 0 20px rgba(255,255,255,0.1); }
+</style><link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
+<body class="text-brand-light antialiased selection:bg-white/20 selection:text-white overflow-x-hidden bg-brand-black min-h-screen flex flex-col">
+
+
+
+
+    <!-- Navigation (Simplified, Logo Only) -->
+    <nav class="fixed top-0 right-0 left-0 z-50 mix-blend-difference pointer-events-none">
+        <div class="flex h-20 max-w-[1920px] mx-auto px-8 md:px-12 items-center justify-center md:justify-start">
+            <span class="uppercase text-[10px] font-semibold text-white/90 tracking-[0.2em] font-sans">Anthereon Performance Gear</span>
+        </div>
+    </nav>
+
+    <!-- MAIN CANVAS -->
+    <main class="flex-grow flex flex-col pt-20">
+        
+        <!-- HEADER SECTION -->
+        <div class="md:px-12 md:py-24 text-center w-full max-w-[1920px] border-white/5 border-b mr-auto ml-auto pt-16 pr-6 pb-16 pl-6">
+            <div class="animate-fade-in">
+                
+                <h1 class="md:text-6xl lg:text-7xl text-glow leading-none text-4xl font-normal text-white tracking-tight font-playfair mb-8">
+                    The Anthereon System
+                </h1><span class="text-[10px] md:text-xs uppercase block text-neutral-500 tracking-[0.2em] font-mono mb-6" style=""></span>
+                <p class="text-lg md:text-xl text-neutral-400 font-light max-w-2xl mx-auto leading-relaxed font-sans antialiased">
+                    Anthereon brings artificial intelligence to human motion through connected wearables, adaptive intelligence, and a unified app.
+                </p>
+            </div>
+        </div>
+
+        <!-- Three-Part System Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 w-full max-w-[1920px] mx-auto flex-grow border-b border-white/5">
+            
+            <!-- LEFT PANEL: WEARABLES -->
+            <section class="relative border-r border-white/5 bg-brand-black flex flex-col group overflow-hidden min-h-[70vh] lg:min-h-0">
+                <!-- Visual -->
+                <div class="h-[45%] w-full relative overflow-hidden bg-neutral-900">
+                     <!-- Image: High contrast athletic movement -->
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4c5b5ab8-7627-4e36-b1f6-a9734752211e_1600w.png" class="group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-60 mix-blend-screen w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 grayscale scale-100" alt="Wearable Hardware" style="">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent"></div>
+                    <div class="bg-gradient-to-b from-brand-black/20 via-transparent to-transparent absolute top-0 right-0 bottom-0 left-0">
+</div>
+                    <!-- Subtle sensor indicator -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-white/80 shadow-[0_0_15px_rgba(255,255,255,0.6)] animate-pulse-slow"></div>
+                </div>
+                <!-- Content -->
+                <div class="flex-grow md:p-14 flex flex-col pt-10 pr-10 pb-10 pl-10 justify-start">
+                    <div class="mb-8">
+                         <span class="text-[10px] uppercase tracking-widest text-neutral-500 font-mono mb-4 block">Hardware</span>
+                        <h2 class="text-2xl md:text-3xl font-playfair font-normal text-white tracking-tight leading-snug mb-6 text-glow">
+                            Lightweight wearables designed to move naturally with you.
+                        </h2>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed mb-6 font-sans">
+                            Designed to move naturally with you while capturing how your body moves in real time.
+                        </p>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed font-sans">
+                            Anthereon’s wearable units integrate seamlessly into training, following your movement without restricting motion or changing how you train.
+                        </p>
+                    </div>
+
+                    <div class="mt-auto border-t border-white/5 pt-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-neutral-500 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Worn directly on the body</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-neutral-500 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Comfortable during extended sessions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-neutral-500 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">No cameras or external setup</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-neutral-500 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Built for gym, field, court, and home</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CENTER PANEL: BIO-INTELLIGENCE -->
+            <section class="relative border-r border-white/5 bg-brand-black flex flex-col group overflow-hidden min-h-[70vh] lg:min-h-0">
+                <!-- Visual -->
+                <div class="h-[45%] w-full relative overflow-hidden bg-neutral-900">
+                    <!-- Abstract Data Visual -->
+
+                    <div class="flex overflow-hidden absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
+                        <!-- Simulated Skeletal Data using CSS/SVG -->
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b6b978bd-5f1a-44eb-aaae-7c19789186df_1600w.png" class="group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-60 mix-blend-screen w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 grayscale scale-100" alt="Wearable Hardware" style="">
+                    </div>
+                    
+                </div>
+
+                <!-- Content -->
+                <div class="flex-grow p-10 md:p-14 flex flex-col justify-start">
+                    <div class="mb-8">
+                        <span class="text-[10px] uppercase tracking-widest text-neutral-500 font-mono mb-4 block">Bio-Intelligence</span>
+                        <h2 class="text-2xl md:text-3xl font-playfair font-normal text-white tracking-tight leading-snug mb-6 text-glow">
+                            Movement intelligence built around the human body.
+                        </h2>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed mb-6 font-sans">
+                            At the core of Anthereon is a bio-intelligence layer designed to understand how people move, not just how motion is recorded. It interprets control, coordination, stability, and timing to form a living model of movement that adapts to the individual.
+                        </p>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed font-sans">
+                            Rather than enforcing rigid patterns, this intelligence learns how each body moves and responds, enabling guidance that feels precise, personal, and natural.
+                        </p>
+                    </div>
+
+                    <div class="mt-auto border-t border-white/5 pt-8">
+                         <div class="text-[10px] uppercase tracking-widest text-neutral-600 font-mono mb-4">What it enables</div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-white/40 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Real-time motion correction as you move</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-white/40 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Feedback adapted to individual mechanics and proportions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-white/40 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Consistent understanding of movement across training, sport, and recovery</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RIGHT PANEL: APP EXPERIENCE -->
+            <section class="relative bg-brand-black flex flex-col group overflow-hidden min-h-[70vh] lg:min-h-0">
+                <!-- Visual -->
+                <div class="h-[45%] w-full relative overflow-hidden bg-neutral-900 flex items-center justify-center">
+                    <!-- Minimal App UI Representation -->
+                    <div class="relative w-48 h-auto aspect-[9/19] bg-neutral-900 border border-white/10 rounded-2xl shadow-2xl p-4 flex flex-col gap-3 transform rotate-12 opacity-80 group-hover:rotate-0 group-hover:scale-105 transition-all duration-700">
+                        <div class="h-1 w-8 bg-neutral-800 rounded-full mx-auto"></div>
+                        <div class="h-24 rounded bg-white/5 w-full flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center">
+                                <div class="w-1 h-1 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="h-2 w-3/4 bg-neutral-800 rounded"></div>
+                            <div class="h-2 w-1/2 bg-neutral-800 rounded"></div>
+                        </div>
+                         <!-- Scanline -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent pointer-events-none"></div>
+                    </div>
+                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/691a5cb8-43fc-4038-a46d-cc062fb1fc0a_800w.png" class="group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-60 mix-blend-screen w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 grayscale scale-100" alt="Wearable Hardware" style="">
+                    <div class="bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
+                </div>
+
+                <!-- Content -->
+                <div class="flex-grow p-10 md:p-14 flex flex-col justify-start">
+                    <div class="mb-8">
+                        <span class="text-[10px] uppercase tracking-widest text-neutral-500 font-mono mb-4 block">Software</span>
+                        <h2 class="text-2xl md:text-3xl font-playfair font-normal text-white tracking-tight leading-snug mb-6 text-glow">
+                            One app that works quietly in the background.
+                        </h2>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed mb-6 font-sans">
+                            Select your workout or sport, go hands-free, and train as usual. Anthereon runs continuously, guiding and tracking movement without requiring constant interaction.
+                        </p>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed font-sans">
+                            The app turns complex movement into simple understanding, before, during, and after training.
+                        </p>
+                    </div>
+
+                    <div class="mt-auto border-t border-white/5 pt-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-neutral-500 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Select any workout or sport before you begin</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-neutral-500 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Train hands-free without looking at a screen</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-neutral-500 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Receive real-time haptic feedback for motion correction</span>
+                            </li>
+                             <li class="flex items-start gap-3">
+                                <span class="w-1 h-1 rounded-full bg-neutral-500 mt-2"></span>
+                                <span class="text-sm font-light text-neutral-300">Track technique, consistency, and performance over time</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- CONNECTIVE SYSTEM LINE -->
+    <footer class="w-full border-white/5 border-t pt-16 pb-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-lg md:text-xl font-playfair text-neutral-500 tracking-wide font-light">
+                <span class="text-white">Hardware</span> captures movement. <span class="text-white">Bio-intelligence</span> interprets it. The <span class="text-white">app</span> delivers guidance.
+            </p>
+            <div class="mt-8 flex justify-center items-center gap-2 opacity-30">
+                <div class="h-px w-12 bg-white"></div>
+                <div class="h-1 w-1 rounded-full bg-white"></div>
+                <div class="h-px w-12 bg-white"></div>
+            </div>
+        </div>
+    </footer>
+
+
+</body></html>

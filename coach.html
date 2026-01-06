@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthereon | Coaches &amp; Trainers</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+playfair: ['Playfair Display', 'serif'],
+mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+},
+colors: {
+brand: {
+black: '#050505',
+dark: '#0a0a0a',
+gray: '#171717',
+light: '#f5f5f5',
+accent: '#ffffff'
+}
+},
+animation: {
+'fade-in': 'fadeIn 1.5s ease-out forwards',
+'slide-up': 'slideUp 1s ease-out forwards',
+'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+},
+keyframes: {
+fadeIn: {
+'0%': { opacity: '0' },
+'100%': { opacity: '1' },
+},
+slideUp: {
+'0%': { transform: 'translateY(20px)', opacity: '0' },
+'100%': { transform: 'translateY(0)', opacity: '1' },
+},
+}
+}
+}
+}
+</script>
+<style>
+/* Utility to hide scrollbars */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.glass { background: rgba(5, 5, 5, 0.7); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.text-glow { text-shadow: 0 0 30px rgba(255,255,255,0.1); }
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
+<body class="text-brand-light antialiased selection:bg-white selection:text-black overflow-x-hidden bg-brand-black">
+
+    <!-- Navigation (Simplified, No CTA) -->
+    <nav class="fixed glass transition-all duration-300 z-50 top-0 right-0 left-0">
+        <div class="flex h-16 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
+            
+            <!-- No CTA buttons as requested -->
+        <a href="#" class="hover:opacity-80 transition-opacity uppercase text-xs font-semibold text-white tracking-widest">Anthereon Performance Gear</a></div>
+    </nav>
+
+    <!-- 1. HERO — WHAT THIS IS -->
+    <section class="min-h-screen flex items-center relative pt-20 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Left: Text -->
+                <div class="space-y-8 animate-slide-up" style="animation-delay: 0.1s;">
+                    <span class="inline-flex items-center uppercase select-none text-xl font-medium text-cyan-300 tracking-wider font-mono bg-cyan-500/10 border-cyan-500/20 border rounded-full px-3 py-1">Coaches &amp; Trainers</span>
+                    <h1 class="text-5xl md:text-7xl font-playfair font-normal text-white tracking-tight leading-[1.1]">
+                        Real-time coaching, grounded in how athletes move.
+                    </h1>
+                    <div class="space-y-6">
+                        <p class="text-lg md:text-xl font-light text-neutral-400 leading-relaxed max-w-lg">
+                            Anthereon gives coaches live visibility into joint movement, muscle activation, and technique while training is happening.
+                        </p>
+                        <p class="text-lg md:text-xl font-light text-neutral-400 leading-relaxed max-w-lg">
+                            Whether coaching a team or a single athlete, performance becomes observable in the moment, not after.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Visual -->
+                <div class="relative h-[600px] rounded-lg overflow-hidden border border-white/10 animate-fade-in" style="animation-delay: 0.3s;">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f4465fad-a40f-4d16-a4a6-a712c82b716d_1600w.png" alt="Coach observing athlete" class="absolute inset-0 w-full h-full object-cover grayscale opacity-60 hover:opacity-80 transition-all duration-700" style="">
+                    <div class="bg-gradient-to-t from-brand-black/80 via-transparent to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
+                    
+                    <!-- Overlay UI Elements -->
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <div class="flex bg-black/40 border-white/10 border rounded-lg p-4 backdrop-blur-md items-center justify-between">
+    <div class="flex items-center gap-3">
+        <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+        <span class="text-xs font-mono text-white tracking-wider">LIVE FEED // S. WILLIAMS</span>
+    </div>
+    <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+        <div class="text-right">
+            <span class="block text-[10px] text-neutral-500 uppercase">Velocity</span>
+            <span class="text-sm text-white font-medium">1.2 m/s</span>
+        </div>
+        <div class="text-right">
+            <span class="block text-[10px] text-neutral-500 uppercase">Symmetry</span>
+            <span class="text-sm text-emerald-400 font-medium">98%</span>
+        </div>
+        <div class="text-right">
+            <span class="block text-[10px] text-neutral-500 uppercase">Speed</span>
+            <span class="text-sm text-white font-medium">5.4 m/s</span>
+        </div>
+        <div class="text-right">
+            <span class="block text-[10px] text-neutral-500 uppercase">Agility</span>
+            <span class="text-sm text-cyan-400 font-medium">92%</span>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SECTION 1 — THE COACH DASHBOARD -->
+    <section class="py-32 border-b border-white/5 bg-neutral-900/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mb-16">
+                <h2 class="text-3xl md:text-5xl font-playfair font-normal text-white tracking-tight mb-6">A dedicated dashboard built for coaches.</h2>
+                <p class="text-lg font-light text-neutral-400 leading-relaxed">
+                    Anthereon includes a coach-specific dashboard designed for live training environments. It shows real-time movement and muscle insight for the athletes you are currently coaching, without interrupting training flow.
+                </p>
+            </div>
+
+            <!-- Dashboard Visualization -->
+            <div class="w-full bg-[#080808] border border-white/10 rounded-xl overflow-hidden shadow-2xl relative">
+                <!-- Header -->
+                <div class="h-14 border-b border-white/5 flex items-center justify-between px-6 bg-white/[0.02]">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">Active Session</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">LIVE</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="w-2 h-2 rounded-full bg-neutral-700"></div>
+                        <div class="w-2 h-2 rounded-full bg-neutral-700"></div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Content -->
+                <div class="p-6 grid gap-4">
+                    <!-- Column Headers -->
+                    <div class="grid grid-cols-12 gap-4 px-4 pb-2 text-[10px] uppercase tracking-wider text-neutral-600 font-mono">
+                        <div class="col-span-3">Athlete</div>
+                        <div class="col-span-2">Status</div>
+                        <div class="col-span-2">Load</div>
+                        <div class="col-span-3">Key Metric</div>
+                        <div class="col-span-2 text-right">Trend</div>
+                    </div>
+
+                    <!-- Row 1 -->
+                    <div class="grid grid-cols-12 gap-4 items-center bg-white/[0.03] hover:bg-white/[0.05] transition-colors border border-white/5 rounded-lg p-4 group">
+                        <div class="col-span-3 flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-xs text-white">JD</div>
+                            <div class="">
+                                <div class="text-sm text-white font-medium">J. Davis</div>
+                                <div class="text-[10px] text-neutral-500">Sprinting</div>
+                            </div>
+                        </div>
+                        <div class="col-span-2">
+                            <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Optimal
+                            </span>
+                        </div>
+                        <div class="col-span-2">
+                            <div class="w-full h-1 bg-neutral-800 rounded-full overflow-hidden">
+                                <div class="w-[75%] h-full bg-neutral-500"></div>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="text-xs text-neutral-300">Hip Flexion: <span class="text-white">Symm</span></div>
+                        </div>
+                        <div class="col-span-2 text-right">
+                             <svg width="60" height="24" viewBox="0 0 60 24" class="inline-block text-emerald-500/50"><path d="M0 20 L10 18 L20 12 L30 14 L40 8 L50 10 L60 4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="grid grid-cols-12 gap-4 items-center bg-white/[0.03] hover:bg-white/[0.05] transition-colors border border-white/5 rounded-lg p-4 group">
+                        <div class="col-span-3 flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-xs text-white">MK</div>
+                            <div class="">
+                                <div class="text-sm text-white font-medium">M. Kim</div>
+                                <div class="text-[10px] text-neutral-500">Agility Drills</div>
+                            </div>
+                        </div>
+                        <div class="col-span-2">
+                            <span class="inline-flex items-center gap-1.5 text-xs text-yellow-400">
+                                <span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span> Fatigue
+                            </span>
+                        </div>
+                        <div class="col-span-2">
+                            <div class="w-full h-1 bg-neutral-800 rounded-full overflow-hidden">
+                                <div class="w-[88%] h-full bg-yellow-600"></div>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="text-xs text-neutral-300">GCT: <span class="text-yellow-400">+12%</span></div>
+                        </div>
+                        <div class="col-span-2 text-right">
+                             <svg width="60" height="24" viewBox="0 0 60 24" class="inline-block text-yellow-500/50"><path d="M0 12 L10 12 L20 14 L30 16 L40 18 L50 20 L60 22" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="grid grid-cols-12 gap-4 items-center bg-white/[0.03] hover:bg-white/[0.05] transition-colors border border-white/5 rounded-lg p-4 group">
+                        <div class="col-span-3 flex items-center gap-3">
+                            <div class="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-xs text-white">TR</div>
+                            <div class="">
+                                <div class="text-sm text-white font-medium">T. Reed</div>
+                                <div class="text-[10px] text-neutral-500">Vertical Jump</div>
+                            </div>
+                        </div>
+                        <div class="col-span-2">
+                            <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Optimal
+                            </span>
+                        </div>
+                        <div class="col-span-2">
+                            <div class="w-full h-1 bg-neutral-800 rounded-full overflow-hidden">
+                                <div class="w-[45%] h-full bg-neutral-500"></div>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="text-xs text-neutral-300">Landing: <span class="text-white">Stable</span></div>
+                        </div>
+                        <div class="col-span-2 text-right">
+                             <svg width="60" height="24" viewBox="0 0 60 24" class="inline-block text-emerald-500/50"><path d="M0 15 L10 15 L20 15 L30 10 L40 5 L50 5 L60 5" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer of Dashboard -->
+                <div class="px-6 py-4 border-t border-white/5 bg-white/[0.02] flex gap-8">
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-neutral-500"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+                        <span class="text-[10px] text-neutral-500">Joint Movement</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-neutral-500"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                        <span class="text-[10px] text-neutral-500">Technique Consistency</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-neutral-500"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <span class="text-[10px] text-neutral-500">Stress Signals</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECTION 2 — TEAM COACHING -->
+    <section class="border-white/5 border-b pt-24 pb-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Left: Image -->
+                <div class="relative h-[500px] rounded-lg overflow-hidden border border-white/10 group">
+                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/eab8bdc0-1204-4963-8806-8689a08faaad_3840w.png" alt="Team training session" class="group-hover:opacity-70 transition-all duration-700 opacity-50 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 grayscale">
+                     <!-- Subtle markers overlay -->
+                     <div class="absolute top-[30%] left-[20%] w-2 h-2 rounded-full bg-white/50 ring-1 ring-white/20"></div>
+                     <div class="absolute top-[35%] left-[60%] w-2 h-2 rounded-full bg-white/50 ring-1 ring-white/20"></div>
+                     <div class="absolute top-[25%] left-[40%] w-2 h-2 rounded-full bg-white/50 ring-1 ring-white/20"></div>
+                </div>
+
+                <!-- Right: Text -->
+                <div class="">
+                    <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-4 block">Team Context</span>
+                    <h2 class="text-3xl md:text-5xl font-playfair font-normal text-white tracking-tight leading-[1.1] mb-8">
+                        Maintain technique standards across the entire team.
+                    </h2>
+                    <p class="text-lg font-light text-neutral-400 leading-relaxed mb-10">
+                        In team settings, athletes train in the same sport and drills. Anthereon makes every athlete visible during training, allowing coaches to maintain consistency, spot breakdowns early, and focus attention where it’s needed most.
+                    </p>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 flex items-center justify-center w-5 h-5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            </div>
+                            <span class="text-neutral-300 font-light">Monitor all players performing the same drills</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 flex items-center justify-center w-5 h-5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M20 6 9 17l-5-5" class=""></path></svg>
+                            </div>
+                            <span class="text-neutral-300 font-light">Compare movement quality across the team</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 flex items-center justify-center w-5 h-5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            </div>
+                            <span class="text-neutral-300 font-light">Identify players compensating or fatiguing early</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 flex items-center justify-center w-5 h-5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                            </div>
+                            <span class="text-neutral-300 font-light">Make faster, more targeted coaching corrections</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION 3 — SOLO ATHLETE COACHING -->
+    <section class="bg-neutral-900/10 border-white/5 border-b pt-24 pb-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Text Top -->
+            <div class="max-w-4xl mb-12">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-4 block">Individual Performance</span>
+                <h2 class="md:text-5xl leading-[1.1] text-3xl font-normal text-white tracking-tight font-playfair mb-6">
+                    Precision coaching for individual athletes.
+                </h2>
+                <p class="text-lg font-light text-neutral-400 leading-relaxed max-w-2xl">
+                    In sports like tennis, swimming, golf, boxing, or endurance training, coaches work one-on-one but still can’t see every detail in real time. Anthereon provides continuous insight into joint sequencing, muscle activation, timing, and coordination while the athlete trains.
+                </p>
+                <p class="text-lg font-light text-neutral-200 mt-4">
+                    Corrections happen immediately, not after repetition or review.
+                </p>
+            </div>
+
+            <!-- Wide Image -->
+            <div class="relative w-full h-[550px] rounded-lg overflow-hidden border border-white/10 group">
+                <img src="https://images.unsplash.com/photo-1762392050936-cf787f78e812?w=2560&amp;q=80" alt="Individual athlete tennis" class="absolute inset-0 w-full h-full object-cover grayscale opacity-60 group-hover:opacity-80 transition-all duration-1000" style="">
+                <div class="bg-gradient-to-t from-black/60 to-transparent absolute top-0 right-0 bottom-0 left-0"><div class="bg-red-500/10 border-red-500/30 border rounded pt-1.5 pr-3 pb-1.5 pl-3 absolute top-[40%] left-[20%] backdrop-blur-md">
+                             <span class="text-[10px] text-red-400 uppercase tracking-widest font-mono">Asymmetry Detected</span>
+                         </div><div class="text-lg font-serif bg-red-950/10 border-yellow-400/30 border-2 rounded-md pt-2 pr-4 pb-2 pl-4 absolute top-[40%] left-[20%] backdrop-blur-lg">
+                             <span class="text-[10px] text-red-400 uppercase tracking-widest font-mono">Asymmetry Detected</span>
+                         </div><div class="text-lg font-serif bg-red-950/10 border-yellow-400/30 border-2 rounded-md pt-2 pr-4 pb-2 pl-4 absolute top-[40%] left-[20%] backdrop-blur-lg">
+                             <span class="text-[10px] text-red-400 uppercase tracking-widest font-mono">Asymmetry Detected</span>
+                         </div></div>
+                
+                <!-- Floating Info Card -->
+                <div class="absolute bottom-8 left-8 max-w-md">
+                     <div class="bg-black/60 backdrop-blur-sm border-l-2 border-cyan-400 p-4">
+                        <div class="text-white font-medium mb-1">Live Technique Monitoring</div>
+                        <div class="text-sm text-neutral-400 font-light">Real-time correction without stopping the session. Visibility into muscle activation and effort patterns.</div>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Features Grid below image -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 border-t border-white/5 pt-12">
+                <div>
+                    <h4 class="text-white font-medium mb-2">Continuous Monitoring</h4>
+                    <p class="text-sm text-neutral-500 font-light">Live technique tracking during movement.</p>
+                </div>
+                <div class="">
+                    <h4 class="text-white font-medium mb-2">Instant Correction</h4>
+                    <p class="text-sm text-neutral-500 font-light">Adjust form without breaking flow.</p>
+                </div>
+                <div class="">
+                    <h4 class="text-white font-medium mb-2">Effort Patterns</h4>
+                    <p class="text-sm text-neutral-500 font-light">See internal load vs external output.</p>
+                </div>
+                <div class="">
+                    <h4 class="text-white font-medium mb-2">Consistency</h4>
+                    <p class="text-sm text-neutral-500 font-light">Measure precision across sets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION 4 — SEE WHAT THE EYE CAN'T -->
+    <section class="py-24 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                
+                <!-- Left: Visual Detail -->
+                <div class="order-2 md:order-1 relative h-[500px] bg-neutral-900 rounded-lg overflow-hidden border border-white/10 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1713711437257-0232e837f40c?w=1600&amp;q=80" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 mix-blend-luminosity" style="">
+                    
+                    <!-- SVG Overlay -->
+                    <div class="flex absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
+                        <!-- Simulated Skeleton/Analysis Overlay -->
+                         <svg viewBox="0 0 200 400" class="drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] w-[186px] h-[12px]" stroke-width="2" data-icon-replaced="true" style="color: rgb(245, 245, 245); width: 186px; height: 12px;">
+                             <!-- Spine -->
+                             <line x1="100" y1="50" x2="100" y2="200" stroke="white" stroke-width="1" stroke-dasharray="4 4" class="opacity-50"></line>
+                             <!-- Hips -->
+                             <line x1="70" y1="200" x2="130" y2="200" stroke="white" stroke-width="1"></line>
+                             <!-- Leg Left -->
+                             <line x1="70" y1="200" x2="60" y2="350" stroke="#ef4444" stroke-width="2" class="opacity-80"></line> <!-- Red indicates issue -->
+                             <circle cx="65" cy="275" r="3" fill="#ef4444" class="animate-pulse"></circle>
+                             <!-- Leg Right -->
+                             <line x1="130" y1="200" x2="140" y2="350" stroke="white" stroke-width="1" class="opacity-50"></line>
+                         </svg>
+                         
+                         
+                    </div>
+                </div>
+
+                <!-- Right: Text -->
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-5xl font-playfair font-normal text-white tracking-tight leading-[1.1] mb-8">
+                        Detect breakdowns before they’re obvious.
+                    </h2>
+                    <p class="text-lg font-light text-neutral-400 leading-relaxed mb-8">
+                        Many performance issues appear first as subtle changes in coordination, balance, timing, or activation. These are difficult to catch consistently by eye, especially at full speed.
+                    </p>
+                    <p class="text-lg font-normal text-white mb-10 border-l border-cyan-500/50 pl-4">
+                        Anthereon detects these early signals in real time.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white/5 p-4 rounded border border-white/5">
+                            <h4 class="text-white text-sm font-medium mb-1">Early Detection</h4>
+                            <p class="text-xs text-neutral-500 font-light">Spot asymmetry and compensation patterns.</p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded border border-white/5">
+                            <h4 class="text-white text-sm font-medium mb-1">Technique Drift</h4>
+                            <p class="text-xs text-neutral-500 font-light">Identify fatigue-driven form changes.</p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded border border-white/5">
+                            <h4 class="text-white text-sm font-medium mb-1">Inefficiency</h4>
+                            <p class="text-xs text-neutral-500 font-light">Highlight wasted movement energy.</p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded border border-white/5">
+                            <h4 class="text-white text-sm font-medium mb-1">Smart Intervention</h4>
+                            <p class="text-xs text-neutral-500 font-light">Coach exactly when it matters.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECTION 5 — MUSCLE ACTIVATION (IMU + EMG) -->
+    <section class="bg-neutral-900/20 border-white/5 border-b pt-24 pb-24">
+        <div class="max-w-4xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-playfair font-normal text-white tracking-tight leading-[1.1] mb-6">
+                Understand how movement is produced, not just how it looks.
+            </h2>
+            <p class="text-lg font-light text-neutral-400 leading-relaxed max-w-2xl mx-auto">
+                By combining IMU and EMG data, Anthereon shows how muscles activate to create movement, how stress is distributed, and how technique holds up under load or fatigue.
+            </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="relative h-[400px] w-full rounded-xl overflow-hidden border border-white/10">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=2000&amp;q=80" class="absolute inset-0 w-full h-full object-cover grayscale opacity-30 object-center" style="">
+                
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/50 to-brand-black"></div>
+
+                <!-- Data Visualization Overlay -->
+                <div class="flex pt-8 pr-8 pb-8 pl-8 absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
+                    <div class="grid grid-cols-3 gap-8 w-full max-w-4xl">
+                        <!-- Metric 1 -->
+                        <div class="text-center">
+                            <div class="uppercase text-xs text-neutral-500 tracking-widest font-mono mb-2">Activation</div>
+                            <div class="h-32 flex items-end justify-center gap-1 mb-2">
+                                <div class="w-2 bg-neutral-700 h-[40%]"></div>
+                                <div class="w-2 bg-neutral-700 h-[60%]"></div>
+                                <div class="w-2 bg-cyan-500 h-[85%] shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
+                                <div class="w-2 bg-neutral-700 h-[50%]"></div>
+                                <div class="w-2 bg-neutral-700 h-[30%]"></div>
+                            </div>
+                            <p class="text-sm text-white font-light">Real-time visibility</p>
+                        </div>
+                        <!-- Metric 2 -->
+                        <div class="text-center border-l border-white/10 border-r">
+                            <div class="text-xs text-neutral-500 uppercase tracking-widest font-mono mb-2">Load Distribution</div>
+                            <div class="relative h-32 flex items-center justify-center">
+                                <div class="w-24 h-24 rounded-full border border-white/10 flex items-center justify-center relative">
+                                    <div class="absolute inset-0 rounded-full border-t-2 border-cyan-400 rotate-45"></div>
+                                    <span class="text-xl font-light text-white">Balanced</span>
+                                </div>
+                            </div>
+                            <p class="text-sm text-white font-light">Stress accumulation</p>
+                        </div>
+                        <!-- Metric 3 -->
+                        <div class="text-center">
+                             <div class="text-xs text-neutral-500 uppercase tracking-widest font-mono mb-2">Workload</div>
+                             <div class="flex flex-col h-32 gap-x-2 gap-y-2 items-center justify-end w-full px-2">
+    <div class="flex w-full h-full relative items-center justify-center">
+    <svg viewBox="0 0 100 80" class="w-full h-full p-2 opacity-90" preserveAspectRatio="xMidYMid meet">
+        <!-- Stand Base -->
+        <line x1="50" y1="75" x2="50" y2="25" stroke="#404040" stroke-width="1.5" stroke-linecap="round"></line>
+        <line x1="42" y1="75" x2="58" y2="75" stroke="#404040" stroke-width="1.5" stroke-linecap="round"></line>
+        
+        <!-- Balance Beam -->
+        <line x1="20" y1="25" x2="80" y2="25" stroke="#a3a3a3" stroke-width="1.5" stroke-linecap="round"></line>
+        <circle cx="50" cy="25" r="2" fill="#171717" stroke="#a3a3a3" stroke-width="1.5"></circle>
+        
+        <!-- Left Pan (Neutral/Capacity) -->
+        <line x1="20" y1="25" x2="20" y2="50" stroke="#525252" stroke-width="1" stroke-dasharray="2 2"></line>
+        <path d="M12 50 Q20 58 28 50" stroke="#737373" stroke-width="1.5" fill="none"></path>
+        <rect x="17" y="44" width="6" height="6" rx="1" fill="#525252" stroke="none"></rect>
+        <rect x="17" y="37" width="6" height="6" rx="1" fill="#525252" stroke="none"></rect>
+        
+        <!-- Right Pan (Active/Workload) -->
+        <line x1="80" y1="25" x2="80" y2="50" stroke="#525252" stroke-width="1" stroke-dasharray="2 2"></line>
+        <path d="M72 50 Q80 58 88 50" stroke="#22d3ee" stroke-width="1.5" fill="none"></path>
+        <rect x="77" y="44" width="6" height="6" rx="1" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-width="1" class="shadow-[0_0_10px_rgba(34,211,238,0.5)]"></rect>
+    </svg>
+</div>
+</div>
+                             <p class="text-sm text-white font-light">Informed decisions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SECTION 6 — CONTEXT & CLOSING -->
+    <section class="py-32 bg-brand-black">
+        <div class="max-w-3xl mx-auto px-6 text-center space-y-16">
+            
+            <!-- Context -->
+            <div class="space-y-6">
+                <h3 class="text-2xl font-medium text-white font-playfair" style="visibility: hidden;">One system, adaptable to how you coach.</h3>
+                <p class="text-neutral-500 font-light leading-relaxed">
+                    Anthereon works for team coaches, individual coaches, trainers managing multiple athletes, and performance staff. Each athlete trains in their sport. Coaches see what matters, in real time.
+                </p>
+            </div>
+
+            <!-- Image Montage -->
+            <div class="grid grid-cols-3 gap-2 opacity-50 grayscale mix-blend-screen">
+                <img src="https://images.unsplash.com/photo-1649029476766-3dce4bf23b3f?w=800&amp;q=80" class="h-24 w-full object-cover rounded" style="">
+                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&amp;q=80" class="h-24 w-full object-cover rounded" style="">
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&amp;q=80" class="h-24 w-full object-cover rounded" style="">
+            </div>
+
+            <!-- Closing Line -->
+            <div class="pt-10 border-t border-white/5">
+                <h2 class="text-3xl md:text-5xl font-playfair font-normal text-white tracking-tight">
+                    When movement is visible, <span class="text-neutral-500">coaching becomes precise.</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="text-xs text-neutral-600 font-sans">© 2024 ANTHEREON</span>
+            <div class="flex gap-6">
+                <a href="#" class="text-neutral-600 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:twitter" data-width="16" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"></path></svg></a>
+                <a href="#" class="text-neutral-600 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:instagram" data-width="16" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"></path></g></svg></a>
+            </div>
+        </div>
+    </footer>
+
+<textarea class="" style="font-size: 24px; font-weight: 500; font-family: &quot;Playfair Display&quot;, serif; color: rgb(255, 255, 255); line-height: 32px; text-align: center; text-transform: none; letter-spacing: normal; position: absolute; left: 556.804px; top: 5722.44px; width: 720.014px; height: 32.0028px; box-sizing: border-box; padding: 0px; margin: 0px; border: none; background: transparent; resize: none; overflow: auto; z-index: 2147483647;"></textarea></body></html>

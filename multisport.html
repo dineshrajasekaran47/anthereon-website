@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthereon | Movement Intelligence Across Sports</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body {
+background-color: #050505;
+color: #e5e5e5;
+}
+/* Premium Grain Texture */
+.grain-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 50;
+opacity: 0.03;
+background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+/* Smooth Reveal Animation Classes */
+.reveal-on-scroll {
+opacity: 0;
+transform: translateY(30px);
+transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-on-scroll.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
+/* Custom Scrollbar hide */
+.scrollbar-hide::-webkit-scrollbar {
+display: none;
+}
+</style><link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
+<body class="antialiased font-sans font-light selection:bg-white/20 selection:text-white">
+
+    <!-- Grain Texture Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation (Logo Only - Minimal) -->
+    <nav class="fixed z-40 md:px-12 mix-blend-difference pt-8 pr-6 pb-8 pl-6 top-0 right-0 left-0">
+        <div class="flex justify-center md:justify-start">
+            
+        </div>
+    <a href="#" class="hover:opacity-80 transition-opacity uppercase text-xs font-semibold text-white tracking-widest">Anthereon Performance Gear</a></nav>
+
+    <!-- INTRO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Visual -->
+        <div class="absolute inset-0 z-0">
+             <video autoplay="" loop="" muted="" playsinline="" class="w-full h-full object-cover opacity-40 grayscale contrast-125 scale-105">
+                <source src="https://videos.pexels.com/video-files/3196236/3196236-uhd_2560_1440_25fps.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-black/80 via-brand-black/20 to-brand-black"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-12">
+            <div class="reveal-on-scroll space-y-2 is-visible">
+                <h1 class="md:text-7xl leading-[1.1] text-4xl font-normal text-white tracking-tight font-playfair">Different sports. <br> <span class="text-brand-dim">One intelligence system.</span></h1>
+            </div>
+            
+            <div class="reveal-on-scroll transition-delay-200 is-visible">
+                <p class="md:text-xl leading-relaxed text-lg font-light text-neutral-400 max-w-2xl mr-auto ml-auto">Anthereon understands how the body accelerates, stabilizes, rotates, and transfers force. That understanding applies across training, competition, and recovery, regardless of the sport.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: STRENGTH & LIFTING -->
+    <section class="py-32 md:py-48 relative border-t border-white/5">
+        <div class="grid md:grid-cols-2 gap-16 md:gap-24 max-w-7xl mr-auto ml-auto pr-6 pl-6 gap-x-16 gap-y-16 items-center">
+            
+            <!-- Visual -->
+            <div class="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm reveal-on-scroll order-2 md:order-1 group">
+                <img src="https://images.unsplash.com/photo-1641337221253-fdc7237f6b61?w=1600&amp;q=80" alt="Strength Training" class="w-full h-full object-cover grayscale brightness-75 contrast-125 group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                <!-- Overlay graphics representing tracking -->
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-60"></div>
+                
+                <!-- Merge Gradient: Fades to right into text -->
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505] md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#050505] z-10"></div>
+                
+                <div class="absolute bottom-8 left-8 right-8 flex justify-between items-end border-b border-white/20 pb-4 z-20">
+                    <span class="text-xs font-mono uppercase tracking-widest text-white/60">Load Stability</span>
+                    <span class="text-white font-sans text-lg">98%</span>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="reveal-on-scroll order-1 md:order-2">
+                
+                <!-- Highlighted Section Name -->
+                <span class="block text-sm md:text-base font-medium font-mono uppercase tracking-widest text-brand-dim mb-8">Strength &amp; Lifting</span>
+
+                <!-- Stacked Sport Names -->
+                <h2 class="md:text-4xl leading-snug text-2xl text-white tracking-tight font-playfair mb-8 space-y-1">
+                    <span class="block text-white">Bodybuilding</span>
+                    <span class="block text-white/60">Powerlifting</span> 
+                    <span class="block text-white/40">Weightlifting</span>
+                </h2>
+                
+                <p class="text-lg text-neutral-400 font-light leading-relaxed mb-12">
+                    Strength sports demand consistency, control, and efficient force transfer. Anthereon tracks how movement quality changes rep by rep, not just how much weight is lifted.
+                    
+                    It supports learning proper mechanics, refining technique under load, and maintaining form as intensity increases.
+                </p>
+
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 border-b border-white/10 pb-2 mb-4 w-max">What Anthereon Enables</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Technique tracking across repetitions and sessions</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Detection of asymmetry and instability under load</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Real-time correction through haptic feedback</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: COURT & RACQUET -->
+    <section class="md:py-48 border-white/5 border-t pt-32 pb-32 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+            
+            <!-- Content -->
+            <div class="reveal-on-scroll">
+                
+                <!-- Highlighted Section Name -->
+                <span class="block text-sm md:text-base font-medium font-mono uppercase tracking-widest text-brand-dim mb-8">Court &amp; Racquet</span>
+
+                <!-- Stacked Sport Names -->
+                <h2 class="text-2xl md:text-4xl font-playfair text-white mb-8 tracking-tight leading-snug space-y-1">
+                    <span class="block text-white">Tennis</span>
+                    <span class="block text-white/70">Pickleball</span> 
+                    <span class="block text-white/50">Badminton</span> 
+                    <span class="block text-white/40">Squash</span> 
+                    <span class="block text-white/30">Volleyball</span>
+                </h2>
+                
+                <p class="text-lg text-neutral-400 font-light leading-relaxed mb-12">
+                    Court and racquet sports rely on timing, rotation, coordination, and repeatable technique. Anthereon tracks how efficiently the body moves through each action, not just the outcome.
+                    
+                    It helps athletes learn clean mechanics, refine precision, and maintain consistency across drills and extended play.
+                </p>
+
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 border-b border-white/10 pb-2 mb-4 w-max">What Anthereon Enables</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Analysis of rotational mechanics and coordination</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Tracking of technique consistency across rallies and drills</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Feedback on balance, footwork, and recovery positioning</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm reveal-on-scroll group">
+                <img src="https://images.unsplash.com/photo-1516742720271-6ae39cbc5bd1?w=1600&amp;q=80" alt="Tennis Player" class="w-full h-full object-cover grayscale brightness-75 contrast-125 group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-60"></div>
+                
+                <!-- Merge Gradient: Fades to left into text -->
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505] md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#050505] z-10"></div>
+                
+                 <!-- Rotational graphic overlay -->
+                 
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: FIELD & TEAM -->
+    <section class="py-32 md:py-48 relative border-t border-white/5 bg-brand-dark/30">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+            
+            <!-- Visual -->
+            <div class="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm reveal-on-scroll order-2 md:order-1 group">
+                <img src="https://images.unsplash.com/photo-1505666287802-931dc83948e9?w=800&amp;q=80" alt="Football Player" class="w-full h-full object-cover grayscale brightness-75 contrast-125 group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                <div class="bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-60 absolute top-0 right-0 bottom-0 left-0"></div>
+
+                <!-- Merge Gradient: Fades to right into text -->
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505] md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#050505] z-10"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="reveal-on-scroll order-1 md:order-2">
+                
+                <!-- Highlighted Section Name -->
+                <span class="block text-sm md:text-base font-medium font-mono uppercase tracking-widest text-brand-dim mb-8">Field &amp; Team</span>
+
+                <!-- Stacked Sport Names -->
+                <h2 class="md:text-4xl leading-snug text-2xl text-white tracking-tight font-playfair mb-8 space-y-1">
+                    <span class="block text-white">Basketball</span>
+                    <span class="block text-white/70">Football</span> 
+                    <span class="block text-white/50">American Football</span> 
+                    <span class="block text-white/30">Hockey</span>
+                </h2>
+                
+                <p class="leading-relaxed text-lg font-light text-neutral-400 mb-12">
+                    Team sports demand acceleration, deceleration, balance, and repeatable execution under intensity. Anthereon tracks how movement quality holds up during dynamic, high-speed play.
+                    
+                    It enables both individual insight and team-level understanding of consistency, imbalance, and risk.
+                </p>
+
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 border-b border-white/10 pb-2 mb-4 w-max">What Anthereon Enables</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Monitoring of cutting, acceleration, and directional change mechanics</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Detection of asymmetry and compensation patterns</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Comparison of movement quality across players</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: ENDURANCE -->
+    <section class="py-32 md:py-48 relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+            
+            <!-- Content -->
+            <div class="reveal-on-scroll">
+                
+                <!-- Highlighted Section Name -->
+                <span class="block text-sm md:text-base font-medium font-mono uppercase tracking-widest text-brand-dim mb-8">Endurance</span>
+
+                <!-- Stacked Sport Names -->
+                <h2 class="text-2xl md:text-4xl font-playfair text-white mb-8 tracking-tight leading-snug space-y-1">
+                    <span class="block text-white">Swimming</span> 
+                    <span class="block text-white/70">Cycling</span> 
+                    <span class="block text-white/60">Rowing</span> 
+                    <span class="block text-white/50">Triathlon</span> 
+                    <span class="block text-white/30">Marathons</span>
+                </h2>
+                
+                <p class="text-lg text-neutral-400 font-light leading-relaxed mb-12">
+                    Endurance performance depends on efficiency and the ability to preserve form over time. Anthereon tracks how movement quality evolves as fatigue accumulates.
+                    
+                    It helps athletes build efficient habits, monitor drift, and understand how form impacts long-term performance.
+                </p>
+
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 border-b border-white/10 pb-2 mb-4 w-max">What Anthereon Enables</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Tracking of movement efficiency across long sessions</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Detection of subtle technique drift under fatigue</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Comparison of form quality across distances and intensity</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm reveal-on-scroll group">
+                <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&amp;q=80" alt="Runner" class="w-full h-full object-cover grayscale brightness-75 contrast-125 group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-60"></div>
+                
+                <!-- Merge Gradient: Fades to left into text -->
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505] md:bg-gradient-to-l md:from-transparent md:via-transparent md:to-[#050505] z-10"></div>
+                
+                <!-- Smooth flow lines -->
+                <svg class="absolute bottom-0 left-0 w-full h-32 opacity-20 z-20" preserveAspectRatio="none" viewBox="0 0 100 100">
+                    <path d="M0,50 Q25,30 50,50 T100,50" stroke="white" stroke-width="0.5" fill="none"></path>
+                    <path d="M0,60 Q25,40 50,60 T100,60" stroke="white" stroke-width="0.5" fill="none"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: STRIKING & ROTATIONAL -->
+    <section class="py-32 md:py-48 relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+            
+            <!-- Visual -->
+            <div class="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm reveal-on-scroll order-2 md:order-1 group">
+                <img src="https://images.unsplash.com/photo-1617052068651-e6d3b7859315?w=1600&amp;q=80" alt="Boxer" class="w-full h-full object-cover grayscale brightness-75 contrast-125 group-hover:scale-105 transition-transform duration-[2s] ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-60"></div>
+                
+                <!-- Merge Gradient: Fades to right into text -->
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505] md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#050505] z-10"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="reveal-on-scroll order-1 md:order-2">
+                
+                <!-- Highlighted Section Name -->
+                <span class="block text-sm md:text-base font-medium font-mono uppercase tracking-widest text-brand-dim mb-8">Striking &amp; Rotational</span>
+
+                <!-- Stacked Sport Names -->
+                <h2 class="text-2xl md:text-4xl font-playfair text-white mb-8 tracking-tight leading-snug space-y-1">
+                    <span class="block text-white">Boxing</span> 
+                    <span class="block text-white/60">Cricket</span> 
+                    <span class="block text-white/40">Baseball</span>
+                </h2>
+                
+                <p class="text-lg text-neutral-400 font-light leading-relaxed mb-12">
+                    Rotational and striking sports rely on sequencing, timing, and power transfer. Anthereon analyzes how the kinetic chain moves through each action.
+                    
+                    It supports learning clean mechanics, refining efficiency, and maintaining consistency across repeated efforts.
+                </p>
+
+                <div class="space-y-6">
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 border-b border-white/10 pb-2 mb-4 w-max">What Anthereon Enables</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Analysis of rotational sequencing and power transfer</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Tracking of balance and control during strikes or swings</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:check" data-width="16" class="mt-1 text-neutral-500 iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path></svg>
+                            <span class="text-neutral-300 font-light text-sm md:text-base">Detection of inconsistency across repetitions</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CROSS-SPORT CAPABILITIES -->
+    <section class="py-32 md:py-48 relative border-t border-white/5 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="text-3xl md:text-5xl font-playfair text-white mb-8 tracking-tight">Across all sports</h2>
+                <div class="h-px w-24 bg-white/20 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-12">
+                <div class="space-y-8 reveal-on-scroll">
+                    <div class="group">
+                        <p class="text-white font-medium text-lg mb-2">Guided Learning</p>
+                        <p class="text-neutral-400 font-light">Learning new skills through guided movement feedback.</p>
+                    </div>
+                    <div class="group">
+                        <p class="text-white font-medium text-lg mb-2">Mastery</p>
+                        <p class="text-neutral-400 font-light">Mastering technique through consistency and refinement.</p>
+                    </div>
+                    <div class="group">
+                        <p class="text-white font-medium text-lg mb-2">Autonomy</p>
+                        <p class="text-neutral-400 font-light">Drill execution without constant coaching supervision.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8 reveal-on-scroll transition-delay-200">
+                    <div class="group">
+                        <p class="text-white font-medium text-lg mb-2">Advanced Tracking</p>
+                        <p class="text-neutral-400 font-light">Performance tracking beyond reps, time, or score.</p>
+                    </div>
+                    <div class="group">
+                        <p class="text-white font-medium text-lg mb-2">Progress Analysis</p>
+                        <p class="text-neutral-400 font-light">Long-term progress analysis across training phases.</p>
+                    </div>
+                    <div class="group">
+                        <p class="text-white font-medium text-lg mb-2">Prevention</p>
+                        <p class="text-neutral-400 font-light">Early detection of fatigue-driven breakdown.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abstract Composite Background -->
+        <div class="absolute inset-0 z-0 opacity-10 pointer-events-none mix-blend-screen">
+             <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-neutral-800 rounded-full blur-[120px]"></div>
+             <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-neutral-900 rounded-full blur-[100px]"></div>
+        </div>
+    </section>
+
+    <!-- CLOSING -->
+    <footer class="py-32 relative border-t border-white/5 bg-brand-black flex items-center justify-center">
+        <div class="max-w-4xl mx-auto px-6 text-center reveal-on-scroll">
+            <h3 class="text-3xl md:text-5xl font-playfair font-normal text-white leading-tight tracking-tight">
+                Anthereon adapts to the sport <br>
+                <span class="text-neutral-500">because it understands the body first.</span>
+            </h3>
+            
+            <div class="mt-20">
+                <span class="block w-2 h-2 bg-white/20 rounded-full mx-auto"></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Simple Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach((element) => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body></html>
